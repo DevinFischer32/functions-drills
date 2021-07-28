@@ -197,7 +197,7 @@ upperCase(sampleString)
 function froggyDoggy(gold){
   return (gold / 3)
 }
-let totalFrogs = froggyDoggy(22)
+let totalFrogs = froggyDoggy(23)
 console.log(totalFrogs)
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -208,7 +208,7 @@ console.log(totalFrogs)
 function froggyDoggy(gold){
   return Math.floor(gold / 3)
 }
-let totalFrogs2 = froggyDoggy(60)
+let totalFrogs2 = froggyDoggy(10)
 console.log(totalFrogs2)
 ////////////////// PROBLEM 14 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -220,13 +220,16 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-function order(array4){
-  for(let i=0; i > array4.length; i++){
-    if(array4[i]>array4[i+1])
+function order(array2){
+  for(let i=0; i > array2.length; i++){
+    if(array2[i]>array2[i+1]){
+      return false;
+    }
+  }
+  return true;
 }
-}
-
-let arrayIsAscending = order()
+let arrayIsAscending = order(sampleArray)
+console.log(arrayIsAscending)
 ////////////////// PROBLEM 15 ////////////////////
 
 let duck = "cute";
@@ -249,13 +252,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["Duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck","duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["rubberDuck","sailorDuck","duck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["duck", "realDuck"]
